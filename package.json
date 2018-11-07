@@ -1,0 +1,25 @@
+{
+  "name": "deeplearnreactwebpack",
+  "version": "1.0.0",
+  "description": "just to deep learn webpack & react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "qiaoxin",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-redux": "^5.1.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
