@@ -4,7 +4,7 @@
   "description": "just to deep learn webpack & react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dll": "webpack --config build/config/webpack.lib.js --color"
   },
   "keywords": [
     "webpack",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
     "express": "^4.16.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
