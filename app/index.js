@@ -15,4 +15,4 @@ import { render } from 'react-dom';
 render(
     <h1>just react</h1>,
     document.querySelector('#App')
-)
+);

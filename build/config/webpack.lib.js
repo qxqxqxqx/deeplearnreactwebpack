@@ -58,7 +58,7 @@ const dllConfig = {
         library: '[name]_lib_[hash:5]'
     },
     resolve: {
-        extensions: ['.js', '.json', '.css', '.style', '.sass', '.scss', 'less'],
+        extensions: ['.js', '.json', '.css', '.style', '.sass', '.scss', '.less'],
         alias: {
             'react': path.join(process.cwd(), 'node_modules/react'),
             'react-dom': path.join(process.cwd(), 'node_modules/react-dom')
@@ -90,7 +90,9 @@ const dllConfig = {
             context: __dirname
         }),
         new CleanWebpackPlugin({
-            cleanOnceBeforeBuildPatterns: ['!polyfill*', '!venders*'],
+            cleanOnceBeforeBuildPatterns: [
+                assignPath(dist, DIR_DIST_JS, 'polyfill.lib*'),
+                assignPath(dist, DIR_DIST_JS, 'vendors.lib*')],
             verbose: true,
             dry: false
         })

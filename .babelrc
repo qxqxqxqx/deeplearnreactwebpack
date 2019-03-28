@@ -1,0 +1,23 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": [
+						"ie >= 10",
+						"Chrome >= 40"
+					]
+				}
+			}
+		],
+		"stage-0",
+		"react"
+	],
+	"plugins": [
+		"transform-object-rest-spread",
+		"transform-runtime",
+		"transform-decorators-legacy",
+		"transform-class-properties"
+	]
+}
