@@ -1,23 +1,14 @@
 {
 	"presets": [
-		[
-			"env",
-			{
-				"targets": {
-					"browsers": [
-						"ie >= 10",
-						"Chrome >= 40"
-					]
-				}
-			}
-		],
-		"stage-0",
-		"react"
+		"@babel/preset-react", 
+		"@babel/preset-env",
+		"minify"
 	],
 	"plugins": [
-		"transform-object-rest-spread",
-		"transform-runtime",
-		"transform-decorators-legacy",
-		"transform-class-properties"
+		"@babel/plugin-transform-classes",
+		"@babel/plugin-transform-spread",
+		"@babel/plugin-transform-runtime",
+		["@babel/plugin-proposal-decorators", { "legacy": true }],
+    	["@babel/plugin-proposal-class-properties", { "loose" : true }]
 	]
 }
