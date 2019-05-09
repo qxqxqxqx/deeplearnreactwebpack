@@ -38,7 +38,7 @@ const {
 // ----------------------------------
 const entry = {
     app: [
-        assignPath(client, 'index.js')
+        assignPath(client, 'index.tsx')
     ]
 };
 

@@ -33,7 +33,7 @@ const {
 // ----------------------------------
 const entry = {
     app: [
-        assignPath(client, 'index.js'),
+        assignPath(client, 'index.tsx'),
         `webpack-hot-middleware/client?path=${COMPILER_PUBLIC_PATH}__webpack_hmr&reload=true`
     ]
 };

@@ -1,8 +1,8 @@
 /*
 * @Author: qiaoxin
 * @Date:   2018/11/8 10:19
-* @Last Modified by:   qiaoxin
-* @Last Modified time: 2018/11/8 10:19
+ * @Last Modified by: qiaoxin
+ * @Last Modified time: 2019-05-09 16:51:06
 * @Email: qiaoxinfc@gmail.com
 * @File Path:
 * @File Name: webpack.lib
@@ -58,7 +58,7 @@ const dllConfig = {
         library: '[name]_lib_[hash:5]'
     },
     resolve: {
-        extensions: ['.js', '.json', '.css', '.style', '.sass', '.scss', '.less'],
+        extensions: [".ts", ".tsx", '.js', '.json', '.css', '.style', '.sass', '.scss', '.less'],
         alias: {
             'react': path.join(process.cwd(), 'node_modules/react'),
             'react-dom': path.join(process.cwd(), 'node_modules/react-dom')
@@ -80,7 +80,11 @@ const dllConfig = {
                         loader: 'css-loader'
                     }
                 ]
-            }
+            },
+            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
         ]
     },
     plugins: [
